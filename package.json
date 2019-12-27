@@ -2,19 +2,32 @@
   "name": "button-focus-example",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://StephenEsser.github.io/button-focus-example",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-intl": "^2.8.0",
+    "react-scripts": "3.3.0",
+    "terra-base": "^5.24.0",
+    "terra-button": "^3.28.0",
+    "terra-disclosure-manager": "^4.28.0",
+    "terra-modal-manager": "^6.22.0"
   },
   "scripts": {
+    "aggregate-translations": "tt-aggregate-translations -b ./ -d ./src/**/translations -d ./translations -o ./node_modules/terra-i18n/node_modules -f es6",
+    "clean": "rm -rf node_modules && rm -rf build",
+    "clean:install": "npm run clean && npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "npm run aggregate-translations",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "terra-aggregate-translations": "^1.4.0"
   }
 }
