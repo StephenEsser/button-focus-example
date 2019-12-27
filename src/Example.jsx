@@ -1,6 +1,10 @@
 import React, { useContext, useRef } from 'react';
 import Button from 'terra-button';
+import classNames from 'classnames/bind';
 import { DisclosureManagerContext, DisclosureManagerHeaderAdapter } from 'terra-disclosure-manager';
+import styles from './Example.module.scss';
+
+const cx = classNames.bind(styles);
 
 const Example = () => {
   const dismissDisclosure = useRef();
@@ -49,7 +53,7 @@ const Example = () => {
   }
 
   return (
-    <div>
+    <div className={cx('example')}>
       <Button isBlock text="Launch Modal Manager (No close timeout)" onClick={() => disclose(false)} />
       <Button isBlock text="Launch Modal Manager (10ms close timeout)" onClick={() => disclose(10)} />
       <Button isBlock text="Launch Modal Manager (100ms close timeout)" onClick={() => disclose(100)} />
