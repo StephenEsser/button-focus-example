@@ -1,0 +1,1 @@
+{"version":3,"sources":["Example.module.scss"],"names":[],"mappings":"AAAA,wBAEI,YAAa,CACb,eAAgB,CAHpB,0BAOI,WAAY","file":"main.833a80a6.chunk.css","sourcesContent":[":local {\n  .example {\n    padding: 20px;\n    max-width: 500px;\n  }\n\n  .example > * {\n    margin: 10px;\n  }\n}\n"]}
