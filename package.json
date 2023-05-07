@@ -12,7 +12,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-intl": "^2.8.0",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "terra-base": "^5.24.0",
     "terra-button": "^3.28.0",
     "terra-disclosure-manager": "^4.28.0",
